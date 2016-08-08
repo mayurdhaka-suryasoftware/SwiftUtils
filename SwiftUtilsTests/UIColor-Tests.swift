@@ -15,4 +15,9 @@ class UIColor_Tests: XCTestCase {
         let RGBColor = UIColor(red: 59/255, green: 63/255, blue: 64/255, alpha: 1)
         XCTAssertEqual(color, RGBColor)
     }
+
+    func testColorWithGarbageString() {
+        XCTAssertNil(UIColor(hexString: "garbage"))
+    }
+
 }
