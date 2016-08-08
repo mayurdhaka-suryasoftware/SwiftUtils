@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIColor {
 
-    convenience init(hexString: String) {
+    convenience init?(hexString: String) {
         let hexString = hexString.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
         let scanner = NSScanner(string: hexString)
 
@@ -18,8 +18,9 @@ public extension UIColor {
             scanner.scanLocation = 1
         }
 
-        var color: UInt32 = 0
-        scanner.scanHexInt(&color)
+        guard let color = scanner.scanHexInt() else {
+            return nil
+        }
 
         let mask = 0x000000FF
         let r = Int(color >> 16) & mask
@@ -32,4 +33,5 @@ public extension UIColor {
 
         self.init(red: red, green: green, blue: blue, alpha: 1)
     }
+
 }
