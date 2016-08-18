@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		781201001D657B34004A2B2B /* InsetableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 781200FF1D657B34004A2B2B /* InsetableTextField.swift */; };
 		78B7FE401D3FCCDD00B6D89E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */; };
 		78B7FE421D3FCF1E00B6D89E /* UIColor-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */; };
 		78B7FE431D3FCF6800B6D89E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		781200FF1D657B34004A2B2B /* InsetableTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsetableTextField.swift; sourceTree = "<group>"; };
 		78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Tests.swift"; sourceTree = "<group>"; };
 		AFB84A4F1CE9A66000AA926A /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				AFCC7BB11CE0EC0800854013 /* NSScanner.swift */,
 				AFB84A4F1CE9A66000AA926A /* String+Localized.swift */,
 				78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */,
+				781200FF1D657B34004A2B2B /* InsetableTextField.swift */,
 			);
 			path = SwiftUtils;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB84A501CE9A66000AA926A /* String+Localized.swift in Sources */,
+				781201001D657B34004A2B2B /* InsetableTextField.swift in Sources */,
 				78B7FE401D3FCCDD00B6D89E /* UIColor.swift in Sources */,
 				AFCC7BAF1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */,
 				AFCC7BB21CE0EC0800854013 /* NSScanner.swift in Sources */,
