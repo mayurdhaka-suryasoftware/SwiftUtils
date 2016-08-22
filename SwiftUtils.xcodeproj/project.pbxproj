@@ -19,6 +19,9 @@
 		AFCC7BB21CE0EC0800854013 /* NSScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* NSScanner.swift */; };
 		AFCC7BB31CE0EC0800854013 /* NSScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* NSScanner.swift */; };
 		AFCC7BB61CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */; };
+		AFE5FC111D6AE2B400728753 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC101D6AE2B400728753 /* WeakBox.swift */; };
+		AFE5FC121D6AE2B400728753 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC101D6AE2B400728753 /* WeakBox.swift */; };
+		AFE5FC141D6AE43400728753 /* WeakBoxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		AFCC7BAE1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+ISO8601.swift"; sourceTree = "<group>"; };
 		AFCC7BB11CE0EC0800854013 /* NSScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScanner.swift; sourceTree = "<group>"; };
 		AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+ISO8601-Tests.swift"; sourceTree = "<group>"; };
+		AFE5FC101D6AE2B400728753 /* WeakBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
+		AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakBoxTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,7 @@
 				AFB84A4F1CE9A66000AA926A /* String+Localized.swift */,
 				78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */,
 				781200FF1D657B34004A2B2B /* InsetableTextField.swift */,
+				AFE5FC101D6AE2B400728753 /* WeakBox.swift */,
 			);
 			path = SwiftUtils;
 			sourceTree = "<group>";
@@ -103,6 +109,7 @@
 				AFCC7BA51CE0EBAE00854013 /* Info.plist */,
 				AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */,
 				78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */,
+				AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */,
 			);
 			path = SwiftUtilsTests;
 			sourceTree = "<group>";
@@ -220,6 +227,7 @@
 				78B7FE401D3FCCDD00B6D89E /* UIColor.swift in Sources */,
 				AFCC7BAF1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */,
 				AFCC7BB21CE0EC0800854013 /* NSScanner.swift in Sources */,
+				AFE5FC111D6AE2B400728753 /* WeakBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +235,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE5FC141D6AE43400728753 /* WeakBoxTest.swift in Sources */,
 				AFCC7BB31CE0EC0800854013 /* NSScanner.swift in Sources */,
 				AFCC7BB61CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift in Sources */,
 				AFCC7BB01CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */,
 				78B7FE421D3FCF1E00B6D89E /* UIColor-Tests.swift in Sources */,
 				78B7FE431D3FCF6800B6D89E /* UIColor.swift in Sources */,
+				AFE5FC121D6AE2B400728753 /* WeakBox.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
