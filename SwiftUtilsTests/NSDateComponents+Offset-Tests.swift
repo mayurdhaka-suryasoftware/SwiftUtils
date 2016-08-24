@@ -35,6 +35,7 @@ class NSDateComponents_Offset_Tests: XCTestCase {
         XCTAssertEqual(0, actual.minute)
         XCTAssertEqual(0, actual.second)
         XCTAssertEqual(0, actual.timeZone!.secondsFromGMT)
+        XCTAssertNotNil(actual.date)
     }
 
     func testGMTToIndia() {
@@ -57,6 +58,7 @@ class NSDateComponents_Offset_Tests: XCTestCase {
         XCTAssertEqual(30, actual.minute)
         XCTAssertEqual(0, actual.second)
         XCTAssertEqual(NSTimeZone.fromOffset("+0530")!.secondsFromGMT, actual.timeZone!.secondsFromGMT)
+        XCTAssertNotNil(actual.date)
     }
 
     func testArizonaToIndia() {
@@ -79,6 +81,7 @@ class NSDateComponents_Offset_Tests: XCTestCase {
         XCTAssertEqual(30, actual.minute)
         XCTAssertEqual(0, actual.second)
         XCTAssertEqual(NSTimeZone.fromOffset("+0530")!.secondsFromGMT, actual.timeZone!.secondsFromGMT)
+        XCTAssertNotNil(actual.date)
     }
 
 }
