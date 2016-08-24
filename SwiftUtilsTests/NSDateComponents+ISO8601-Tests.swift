@@ -12,6 +12,11 @@ import XCTest
 
 class NSDateComponentsISO8601: XCTestCase {
 
+    override func setUp() {
+        super.setUp()
+        continueAfterFailure = false
+    }
+
     func testDateOnlyDeserialization() {
         testDeserialization("2016-05-08", year: 2016, month: 5, day: 8)
     }
