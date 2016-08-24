@@ -27,7 +27,9 @@ extension NSDateComponents {
             return nil
         }
         calendar.timeZone = timeZone
-        return calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second, .TimeZone], fromDate: date)
+        let components = calendar.components([.Year, .Month, .Day, .Hour, .Minute, .Second, .TimeZone], fromDate: date)
+        components.calendar = calendar
+        return components
     }
 
 }
