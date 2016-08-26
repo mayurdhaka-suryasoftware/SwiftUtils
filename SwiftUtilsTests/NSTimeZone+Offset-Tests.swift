@@ -18,7 +18,7 @@ class NSTimeZone_Offset_Tests: XCTestCase {
     func testIndia() {
         testFromOffset(actual: NSTimeZone.fromOffset("+0530")!, expected: NSTimeZone.init(name: "Asia/Kolkata")!)
         testFromOffset(actual: NSTimeZone.fromOffset("+05:30")!, expected: NSTimeZone.init(name: "Asia/Kolkata")!)
-        XCTAssertEqual(NSTimeZone.init(name: "Asia/Kolkata")?.offset, "+0530")
+        XCTAssertEqual(NSTimeZone.init(name: "Asia/Kolkata")?.offset, "+05:30")
     }
 
     func testGMT() {
@@ -31,7 +31,7 @@ class NSTimeZone_Offset_Tests: XCTestCase {
     func testArizona() {
         testFromOffset(actual: NSTimeZone.fromOffset("-0700")!, expected: NSTimeZone.init(name: "America/Phoenix")!)
         testFromOffset(actual: NSTimeZone.fromOffset("-07:00")!, expected: NSTimeZone.init(name: "America/Phoenix")!)
-        XCTAssertEqual(NSTimeZone.init(name: "America/Phoenix")?.offset, "-0700")
+        XCTAssertEqual(NSTimeZone.init(name: "America/Phoenix")?.offset, "-07:00")
     }
 
     private func testFromOffset(actual actual: NSTimeZone, expected: NSTimeZone) {

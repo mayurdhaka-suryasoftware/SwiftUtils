@@ -87,7 +87,7 @@ extension NSTimeZone {
             }
             let hours = abs(secondsFromGMT) / (60 * 60)
             let minutes = (abs(secondsFromGMT) % (60 * 60)) / 60
-            return sign + String.init(format: "%02d%02d", hours, minutes)
+            return sign + String.init(format: "%02d:%02d", hours, minutes)
         }
     }
 
