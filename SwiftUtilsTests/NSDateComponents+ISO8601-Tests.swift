@@ -170,4 +170,19 @@ class NSDateComponentsISO8601: XCTestCase {
         return dc
     }
 
+    func testISO8601StringIST() {
+        let dc = createDateComponents(year: 2016, month: 8, day: 28, hour: 5, minute: 3, second: 4, timeZoneOffset: 5.5 * 60 * 60)
+        XCTAssertEqual("2016-08-28T05:03:04+05:30", dc.iso8601String)
+    }
+
+    func testISO8601StringArizona() {
+        let dc = createDateComponents(year: 2016, month: 8, day: 28, hour: 5, minute: 3, second: 4, timeZoneOffset: -7 * 60 * 60)
+        XCTAssertEqual("2016-08-28T05:03:04-07:00", dc.iso8601String)
+    }
+
+    func testISO8601StringGMT() {
+        let dc = createDateComponents(year: 2016, month: 8, day: 28, hour: 5, minute: 3, second: 4, timeZoneOffset: 0)
+        XCTAssertEqual("2016-08-28T05:03:04Z", dc.iso8601String)
+    }
+
 }
