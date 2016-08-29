@@ -132,4 +132,19 @@ extension NSDateComponents {
         self.timeZone = NSTimeZone(forSecondsFromGMT: timeZoneOffset * timeZoneOffsetMultiplier)
     }
 
+    /// Note that this function will crash if the date property of this NSDateComponents is nil.
+    /// If no timeZone is set, GMT is assumed.
+    public var iso8601String: String {
+        get {
+            let formatter = NSDateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+            if let timeZone = self.timeZone {
+                formatter.timeZone = timeZone
+            } else {
+                formatter.timeZone = NSTimeZone.init(forSecondsFromGMT: 0)
+            }
+            return formatter.stringFromDate(date!)
+        }
+    }
+
 }
