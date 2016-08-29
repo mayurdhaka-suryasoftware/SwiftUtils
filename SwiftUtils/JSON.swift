@@ -53,6 +53,9 @@ public class JSON {
         return try valueForKey(key, type: Int.self)
     }
 
+    public func boolForKey(key: String) throws -> Bool {
+        return try valueForKey(key, type: Bool.self)
+    }
     public func jsonForKey(key: String) throws -> JSON {
         return JSON.init(json: try valueForKey(key, type: AnyObject.self))
     }
