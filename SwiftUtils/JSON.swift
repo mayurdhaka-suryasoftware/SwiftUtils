@@ -37,6 +37,14 @@ public class JSON {
         return value
     }
 
+    public func valueForKey<T>(key: String, defaultValue: T, type: T.Type) -> T {
+        do {
+            return try valueForKey(key, type: type)
+        } catch {
+            return defaultValue
+        }
+    }
+
     public func UUIDForKey(key: String) throws -> NSUUID {
         let stringValue = try valueForKey(key, type: String.self)
         guard let uuid = NSUUID.init(UUIDString: stringValue) else {
@@ -49,8 +57,24 @@ public class JSON {
         return try valueForKey(key, type: String.self)
     }
 
+    public func stringForKey(key: String, defaultValue: String) -> String {
+        return valueForKey(key, defaultValue: defaultValue, type: String.self)
+    }
+
     public func intForKey(key: String) throws -> Int {
         return try valueForKey(key, type: Int.self)
+    }
+
+    public func intForKey(key: String, defaultValue: Int) -> Int {
+        return valueForKey(key, defaultValue: defaultValue, type: Int.self)
+    }
+
+    public func boolForKey(key: String) throws -> Bool {
+        return try valueForKey(key, type: Bool.self)
+    }
+
+    public func boolForKey(key: String, defaultValue: Bool) -> Bool {
+        return valueForKey(key, defaultValue: defaultValue, type: Bool.self)
     }
 
     public func jsonForKey(key: String) throws -> JSON {
