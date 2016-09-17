@@ -1,5 +1,5 @@
 //
-//  NSTimeZone+Offset.swift
+//  TimeZone+Offset.swift
 //  SwiftUtils
 //
 //  Created by Gopal Sharma on 8/24/16.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-extension NSTimeZone {
+extension TimeZone {
 
     /**
-     Instantiates an NSTimeZone from an offset value. The offset value must be an ISO8601 compliant string.
+     Instantiates an TimeZone from an offset value. The offset value must be an ISO8601 compliant string.
 
      For instance, and offset of Z would refer to Zulu time zone, or UTC.
 
@@ -19,23 +19,23 @@ extension NSTimeZone {
 
      - parameter offset: ISO8601 compliant offset string
 
-     - returns: NSTimeZone from offset string
+     - returns: TimeZone from offset string
      */
-    public class func fromOffset(offset: String) -> NSTimeZone? {
-        let scanner = NSScanner.init(string: offset)
+    public static func from(offset: String) -> TimeZone? {
+        let scanner = Scanner.init(string: offset)
         // Z stands for the Zulu timezone, which is the same as UTC.
         // If Z exists, then we know it is UTC, so set the time zone and return.
         let scannerLocation = scanner.scanLocation
-        scanner.scanUpToString("Z")
+        _ = scanner.scanUpToString("Z")
         if let  _ = scanner.scanString("Z") {
-            return NSTimeZone.init(forSecondsFromGMT: 0)
+            return TimeZone.init(secondsFromGMT: 0)
         }
 
         // If it wasn't Zulu, try to parse out time zone
         scanner.scanLocation = scannerLocation
-        let signs = NSCharacterSet(charactersInString: "+-")
-        scanner.scanUpToCharactersFromSet(signs)
-        guard let sign = scanner.scanCharactersFromSet(signs) else {
+        let signs = CharacterSet(charactersIn: "+-")
+        _ = scanner.scanUpToCharacters(from: signs)
+        guard let sign = scanner.scanCharacters(from: signs) else {
             return nil
         }
         let timeZoneOffsetMultiplier: Int
@@ -70,23 +70,23 @@ extension NSTimeZone {
 
         let timeZoneOffset = (timeZoneOffsetHour * 60 * 60) + (timeZoneOffsetMinute * 60)
 
-        return NSTimeZone.init(forSecondsFromGMT: timeZoneOffset * timeZoneOffsetMultiplier)
+        return TimeZone.init(secondsFromGMT: timeZoneOffset * timeZoneOffsetMultiplier)
     }
 
     /// An ISO 8601 compliant offset string.
     public var offset: String {
         get {
-            if secondsFromGMT == 0 {
+            if secondsFromGMT() == 0 {
                 return "Z"
             }
             let sign: String
-            if secondsFromGMT < 0 {
+            if secondsFromGMT() < 0 {
                 sign = "-"
             } else {
                 sign = "+"
             }
-            let hours = abs(secondsFromGMT) / (60 * 60)
-            let minutes = (abs(secondsFromGMT) % (60 * 60)) / 60
+            let hours = abs(secondsFromGMT()) / (60 * 60)
+            let minutes = (abs(secondsFromGMT()) % (60 * 60)) / 60
             return sign + String.init(format: "%02d:%02d", hours, minutes)
         }
     }

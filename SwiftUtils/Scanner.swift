@@ -1,19 +1,19 @@
-// NSScanner.swift
-// A set of Swift-idiomatic methods for NSScanner
+// Scanner.swift
+// A set of Swift-idiomatic methods for Scanner
 //
 // (c) 2015 Nate Cook, licensed under the MIT license
 // https://gist.github.com/natecook1000/59bb0c9117b555f5d40d
 
 import Foundation
 
-public extension NSScanner {
+public extension Scanner {
 
     // MARK: Strings
 
     /// Returns a string, scanned as long as characters from a given character set are encountered, or `nil` if none are found.
-    func scanCharactersFromSet(set: NSCharacterSet) -> String? {
+    public func scanCharacters(from set: CharacterSet) -> String? {
         var value: NSString? = ""
-        if scanCharactersFromSet(set, intoString: &value),
+        if scanCharacters(from: set, into: &value),
             let value = value as? String {
             return value
         }
@@ -21,9 +21,9 @@ public extension NSScanner {
     }
 
     /// Returns a string, scanned until a character from a given character set are encountered, or the remainder of the scanner's string. Returns `nil` if the scanner is already `atEnd`.
-    func scanUpToCharactersFromSet(set: NSCharacterSet) -> String? {
+    public func scanUpToCharacters(from set: CharacterSet) -> String? {
         var value: NSString? = ""
-        if scanUpToCharactersFromSet(set, intoString: &value),
+        if scanUpToCharacters(from: set, into: &value),
             let value = value as? String {
             return value
         }
@@ -31,9 +31,9 @@ public extension NSScanner {
     }
 
     /// Returns the given string if scanned, or `nil` if not found.
-    func scanString(str: String) -> String? {
+    public func scanString(_ str: String) -> String? {
         var value: NSString? = ""
-        if scanString(str, intoString: &value),
+        if scanString(str, into: &value),
             let value = value as? String {
             return value
         }
@@ -41,9 +41,9 @@ public extension NSScanner {
     }
 
     /// Returns a string, scanned until the given string is found, or the remainder of the scanner's string. Returns `nil` if the scanner is already `atEnd`.
-    func scanUpToString(str: String) -> String? {
+    public func scanUpToString(_ str: String) -> String? {
         var value: NSString? = ""
-        if scanUpToString(str, intoString: &value),
+        if scanUpTo(str, into: &value),
             let value = value as? String {
             return value
         }
@@ -53,7 +53,7 @@ public extension NSScanner {
     // MARK: Numbers
 
     /// Returns a Double if scanned, or `nil` if not found.
-    func scanDouble() -> Double? {
+    public func scanDouble() -> Double? {
         var value = 0.0
         if scanDouble(&value) {
             return value
@@ -62,7 +62,7 @@ public extension NSScanner {
     }
 
     /// Returns a Float if scanned, or `nil` if not found.
-    func scanFloat() -> Float? {
+    public func scanFloat() -> Float? {
         var value: Float = 0.0
         if scanFloat(&value) {
             return value
@@ -71,34 +71,34 @@ public extension NSScanner {
     }
 
     /// Returns an Int if scanned, or `nil` if not found.
-    func scanInteger() -> Int? {
+    public func scanInteger() -> Int? {
         var value = 0
-        if scanInteger(&value) {
+        if self.scanInt(&value) {
             return value
         }
         return nil
     }
 
     /// Returns an Int32 if scanned, or `nil` if not found.
-    func scanInt() -> Int32? {
+    public func scanInt() -> Int32? {
         var value: Int32 = 0
-        if scanInt(&value) {
+        if scanInt32(&value) {
             return value
         }
         return nil
     }
 
     /// Returns an Int64 if scanned, or `nil` if not found.
-    func scanLongLong() -> Int64? {
+    public func scanLongLong() -> Int64? {
         var value: Int64 = 0
-        if scanLongLong(&value) {
+        if scanInt64(&value) {
             return value
         }
         return nil
     }
 
     /// Returns a UInt64 if scanned, or `nil` if not found.
-    func scanUnsignedLongLong() -> UInt64? {
+    public func scanUnsignedLongLong() -> UInt64? {
         var value: UInt64 = 0
         if scanUnsignedLongLong(&value) {
             return value
@@ -107,8 +107,8 @@ public extension NSScanner {
     }
 
     /// Returns an NSDecimal if scanned, or `nil` if not found.
-    func scanDecimal() -> NSDecimal? {
-        var value = NSDecimal()
+    public func scanDecimal() -> Decimal? {
+        var value = Decimal()
         if scanDecimal(&value) {
             return value
         }
@@ -118,7 +118,7 @@ public extension NSScanner {
     // MARK: Hex Numbers
 
     /// Returns a Double if scanned in hexadecimal, or `nil` if not found.
-    func scanHexDouble() -> Double? {
+    public func scanHexDouble() -> Double? {
         var value = 0.0
         if scanHexDouble(&value) {
             return value
@@ -127,7 +127,7 @@ public extension NSScanner {
     }
 
     /// Returns a Float if scanned in hexadecimal, or `nil` if not found.
-    func scanHexFloat() -> Float? {
+    public func scanHexFloat() -> Float? {
         var value: Float = 0.0
         if scanHexFloat(&value) {
             return value
@@ -136,18 +136,18 @@ public extension NSScanner {
     }
 
     /// Returns a UInt32 if scanned in hexadecimal, or `nil` if not found.
-    func scanHexInt() -> UInt32? {
+    public func scanHexInt() -> UInt32? {
         var value: UInt32 = 0
-        if scanHexInt(&value) {
+        if scanHexInt32(&value) {
             return value
         }
         return nil
     }
 
     /// Returns a UInt64 if scanned in hexadecimal, or `nil` if not found.
-    func scanHexLongLong() -> UInt64? {
+    public func scanHexLongLong() -> UInt64? {
         var value: UInt64 = 0
-        if scanHexLongLong(&value) {
+        if scanHexInt64(&value) {
             return value
         }
         return nil

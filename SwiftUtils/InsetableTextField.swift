@@ -10,16 +10,16 @@ import UIKit
 
 
 // This subclass of UITextField will add the edgeInsets only for the text area of the textField.
-public class InsetableTextField: UITextField {
+open class InsetableTextField: UITextField {
 
-    public var edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+    open var edgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
 
-    override public func textRectForBounds(bounds: CGRect) -> CGRect {
-        return super.textRectForBounds(UIEdgeInsetsInsetRect(bounds, self.edgeInsets))
+    override open func textRect(forBounds bounds: CGRect) -> CGRect {
+        return super.textRect(forBounds: UIEdgeInsetsInsetRect(bounds, self.edgeInsets))
     }
 
-    override public func editingRectForBounds(bounds: CGRect) -> CGRect {
-        return super.editingRectForBounds(UIEdgeInsetsInsetRect(bounds, self.edgeInsets))
+    override open func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return super.editingRect(forBounds: UIEdgeInsetsInsetRect(bounds, self.edgeInsets))
     }
-    
+
 }

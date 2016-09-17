@@ -9,10 +9,11 @@
 import Foundation
 
 
-public enum JSONError: ErrorType {
-    case MissingValue(String)
-    case InvalidValue(String)
-    case Unknown
+public enum JSONError: Error {
+    case missingValue(String)
+    case invalidValue(String)
+    case invalidJSON(Error?)
+    case unknown(String?)
 }
 
 public protocol JSONInitializable {
@@ -21,89 +22,110 @@ public protocol JSONInitializable {
 
 public class JSON {
 
-    private let json: AnyObject
+    private let json: [String: Any]
 
-    public init(json: AnyObject) {
+    public init(json: [String: Any]) {
         self.json = json
     }
 
-    public func valueForKey<T>(key: String, type: T.Type) throws -> T {
-        guard let _ = json.valueForKey(key) else {
-            throw JSONError.MissingValue(key)
+    public convenience init(string: String) throws {
+        guard let data = string.data(using: .utf8) else {
+            throw JSONError.unknown("Unable to convert string to Data")
         }
-        guard let value = json.valueForKey(key) as? T else {
-            throw JSONError.InvalidValue(key)
+        try self.init(data: data)
+    }
+
+    public convenience init(data: Data) throws {
+        do {
+            guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else {
+                throw JSONError.invalidJSON(JSONError.unknown("Root object is not a [String: Any]"))
+            }
+            self.init(json: json)
+        } catch let error {
+            throw JSONError.invalidJSON(error)
+        }
+    }
+
+    public func value<T>(forKey key: String, type: T.Type) throws -> T {
+        guard let _ = json[key] else {
+            throw JSONError.missingValue(key)
+        }
+        guard let value = json[key] as? T else {
+            throw JSONError.invalidValue(key)
         }
         return value
     }
 
-    public func valueForKey<T>(key: String, defaultValue: T, type: T.Type) -> T {
+    public func value<T>(forKey key: String, defaultValue: T, type: T.Type) -> T {
         do {
-            return try valueForKey(key, type: type)
+            return try value(forKey: key, type: type)
         } catch {
             return defaultValue
         }
     }
 
-    public func UUIDForKey(key: String) throws -> NSUUID {
-        let stringValue = try valueForKey(key, type: String.self)
-        guard let uuid = NSUUID.init(UUIDString: stringValue) else {
-            throw JSONError.InvalidValue("\(key) = \(stringValue)")
+    public func UUID(forKey key: String) throws -> UUID {
+        let stringValue = try value(forKey: key, type: String.self)
+        guard let uuid = Foundation.UUID.init(uuidString: stringValue) else {
+            throw JSONError.invalidValue("\(key) = \(stringValue)")
         }
         return uuid
     }
 
-    public func stringForKey(key: String) throws -> String {
-        return try valueForKey(key, type: String.self)
+    public func string(forKey key: String) throws -> String {
+        return try value(forKey: key, type: String.self)
     }
 
-    public func stringForKey(key: String, defaultValue: String) -> String {
-        return valueForKey(key, defaultValue: defaultValue, type: String.self)
+    public func string(forKey key: String, defaultValue: String) -> String {
+        return value(forKey: key, defaultValue: defaultValue, type: String.self)
     }
 
-    public func intForKey(key: String) throws -> Int {
-        return try valueForKey(key, type: Int.self)
+    public func int(forKey key: String) throws -> Int {
+        return try value(forKey: key, type: Int.self)
     }
 
-    public func intForKey(key: String, defaultValue: Int) -> Int {
-        return valueForKey(key, defaultValue: defaultValue, type: Int.self)
+    public func int(forKey key: String, defaultValue: Int) -> Int {
+        return value(forKey: key, defaultValue: defaultValue, type: Int.self)
     }
 
-    public func boolForKey(key: String) throws -> Bool {
-        return try valueForKey(key, type: Bool.self)
+    public func bool(forKey key: String) throws -> Bool {
+        return try value(forKey: key, type: Bool.self)
     }
 
-    public func boolForKey(key: String, defaultValue: Bool) -> Bool {
-        return valueForKey(key, defaultValue: defaultValue, type: Bool.self)
+    public func bool(forKey key: String, defaultValue: Bool) -> Bool {
+        return value(forKey: key, defaultValue: defaultValue, type: Bool.self)
     }
 
-    public func jsonForKey(key: String) throws -> JSON {
-        return JSON.init(json: try valueForKey(key, type: AnyObject.self))
+    public func json(forKey key: String) throws -> JSON {
+        return JSON.init(json: try value(forKey: key, type: [String: Any].self))
     }
 
-    public func arrayForKey(key: String) throws -> NSArray {
-        return try valueForKey(key, type: NSArray.self)
+    public func array(forKey key: String) throws -> NSArray {
+        return try value(forKey: key, type: NSArray.self)
     }
 
-    public func arrayForKey<T where T: JSONInitializable>(key: String, ofType: T.Type) throws -> [T] {
-        let itemsJSON = try arrayForKey(key)
+    public func array<T>(forKey key: String, ofType: T.Type) throws -> [T] where T: JSONInitializable {
+        let itemsJSON = try array(forKey: key)
         var items: [T] = []
-        for itemJSON in itemsJSON {
-            let item = try T.init(json: JSON.init(json: itemJSON))
+        for (index, itemJSON) in itemsJSON.enumerated() {
+            guard let json = itemJSON as? [String: Any] else {
+                throw JSONError.invalidJSON(JSONError.unknown("Item at \(index) is not a [String: Any]"))
+            }
+            let item = try T.init(json: JSON.init(json: json))
             items.append(item)
         }
         return items
     }
 
-    public func hasKey(key: String) -> Bool {
-        if let _ = json.valueForKey(key) {
+    public func hasKey(_ key: String) -> Bool {
+        if let _ = json[key] {
             return true
         }
         return false
     }
 
-    public func hasKey<T>(key: String, ofType: T.Type) -> Bool {
-        if let _ = json.valueForKey(key) as? T {
+    public func hasKey<T>(_ key: String, ofType: T.Type) -> Bool {
+        if let _ = json[key] as? T {
             return true
         }
         return false

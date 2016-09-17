@@ -1,5 +1,5 @@
 //
-//  NSDateComponents+ISO8601-Tests.swift
+//  DateComponents+ISO8601-Tests.swift
 //  SwiftUtils
 //
 //  Created by Gopal Sharma on 5/9/16.
@@ -10,7 +10,7 @@ import Foundation
 
 import XCTest
 
-class NSDateComponentsISO8601: XCTestCase {
+class DateComponentsISO8601: XCTestCase {
 
     override func setUp() {
         super.setUp()
@@ -127,17 +127,17 @@ class NSDateComponentsISO8601: XCTestCase {
         testDeserialization("2014-03-13T10:42:12-09:30", year: 2014, month: 3, day: 13, hour: 10, minute: 42, second: 12, timeZoneOffset: -9.5 * 60 * 60)
     }
 
-    private func testDeserialization(input: String, year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, timeZoneOffset: NSTimeInterval? = nil) {
+    private func testDeserialization(_ input: String, year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, timeZoneOffset: TimeInterval? = nil) {
         let expected = createDateComponents(year: year, month: month, day: day, hour: hour, minute: minute, second: second, timeZoneOffset: timeZoneOffset)
-        let actual = NSDateComponents(iso8601String: input)
+        let actual = DateComponents(iso8601String: input)
         XCTAssertNotNil(actual)
         XCTAssertEqual(expected, actual!)
     }
 
-    private func createDateComponents(year year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, timeZoneOffset: NSTimeInterval? = nil) -> NSDateComponents {
-        let dc = NSDateComponents()
+    private func createDateComponents(year: Int? = nil, month: Int? = nil, day: Int? = nil, hour: Int? = nil, minute: Int? = nil, second: Int? = nil, timeZoneOffset: TimeInterval? = nil) -> DateComponents {
+        var dc = DateComponents()
 
-        dc.calendar = NSCalendar(calendarIdentifier: NSCalendarIdentifierGregorian)
+        dc.calendar = Calendar(identifier: Calendar.Identifier.gregorian)
 
         if let year = year {
             dc.year = year
@@ -164,7 +164,7 @@ class NSDateComponentsISO8601: XCTestCase {
         }
 
         if let timeZoneOffset = timeZoneOffset {
-            dc.timeZone = NSTimeZone(forSecondsFromGMT: Int(timeZoneOffset))
+            dc.timeZone = TimeZone(secondsFromGMT: Int(timeZoneOffset))
         }
 
         return dc
