@@ -10,7 +10,7 @@ import Foundation
 
 extension String {
 
-    public func localized(comment: String = "") -> String {
+    public func localized(_ comment: String = "") -> String {
         // TODO: Write unit tests for this
         return NSLocalizedString(self, comment: comment)
     }

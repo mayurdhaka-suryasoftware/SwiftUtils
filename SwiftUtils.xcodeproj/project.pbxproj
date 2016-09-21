@@ -12,24 +12,22 @@
 		78B7FE421D3FCF1E00B6D89E /* UIColor-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */; };
 		78B7FE431D3FCF6800B6D89E /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */; };
 		AFB84A501CE9A66000AA926A /* String+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB84A4F1CE9A66000AA926A /* String+Localized.swift */; };
+		AFCA7CD11D90ECD900DB12C0 /* JSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCA7CD01D90ECD900DB12C0 /* JSONTests.swift */; };
 		AFCC7B981CE0EBAE00854013 /* SwiftUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = AFCC7B971CE0EBAE00854013 /* SwiftUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFCC7B9F1CE0EBAE00854013 /* SwiftUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCC7B941CE0EBAE00854013 /* SwiftUtils.framework */; };
-		AFCC7BAF1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BAE1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift */; };
-		AFCC7BB01CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BAE1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift */; };
-		AFCC7BB21CE0EC0800854013 /* NSScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* NSScanner.swift */; };
-		AFCC7BB31CE0EC0800854013 /* NSScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* NSScanner.swift */; };
-		AFCC7BB61CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */; };
-		AFE5FC111D6AE2B400728753 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC101D6AE2B400728753 /* WeakBox.swift */; };
-		AFE5FC121D6AE2B400728753 /* WeakBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC101D6AE2B400728753 /* WeakBox.swift */; };
-		AFE5FC141D6AE43400728753 /* WeakBoxTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */; };
+		AFCC7BAF1CE0EBEB00854013 /* DateComponents+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BAE1CE0EBEB00854013 /* DateComponents+ISO8601.swift */; };
+		AFCC7BB01CE0EBEB00854013 /* DateComponents+ISO8601.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BAE1CE0EBEB00854013 /* DateComponents+ISO8601.swift */; };
+		AFCC7BB21CE0EC0800854013 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* Scanner.swift */; };
+		AFCC7BB31CE0EC0800854013 /* Scanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB11CE0EC0800854013 /* Scanner.swift */; };
+		AFCC7BB61CE0ECC400854013 /* DateComponents+ISO8601-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCC7BB41CE0ECC400854013 /* DateComponents+ISO8601-Tests.swift */; };
 		AFE5FC291D6C577A00728753 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC281D6C577A00728753 /* JSON.swift */; };
 		AFE5FC2A1D6C577A00728753 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC281D6C577A00728753 /* JSON.swift */; };
-		AFE5FC2C1D6D9C9500728753 /* NSTimeZone+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2B1D6D9C9500728753 /* NSTimeZone+Offset.swift */; };
-		AFE5FC2D1D6D9C9500728753 /* NSTimeZone+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2B1D6D9C9500728753 /* NSTimeZone+Offset.swift */; };
-		AFE5FC2F1D6D9EBD00728753 /* NSDateComponents+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2E1D6D9EBD00728753 /* NSDateComponents+Offset.swift */; };
-		AFE5FC301D6D9EBD00728753 /* NSDateComponents+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2E1D6D9EBD00728753 /* NSDateComponents+Offset.swift */; };
-		AFE5FC321D6D9F1E00728753 /* NSTimeZone+Offset-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC311D6D9F1E00728753 /* NSTimeZone+Offset-Tests.swift */; };
-		AFE5FC341D6DA37500728753 /* NSDateComponents+Offset-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC331D6DA37500728753 /* NSDateComponents+Offset-Tests.swift */; };
+		AFE5FC2C1D6D9C9500728753 /* TimeZone+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2B1D6D9C9500728753 /* TimeZone+Offset.swift */; };
+		AFE5FC2D1D6D9C9500728753 /* TimeZone+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2B1D6D9C9500728753 /* TimeZone+Offset.swift */; };
+		AFE5FC2F1D6D9EBD00728753 /* DateComponents+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2E1D6D9EBD00728753 /* DateComponents+Offset.swift */; };
+		AFE5FC301D6D9EBD00728753 /* DateComponents+Offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC2E1D6D9EBD00728753 /* DateComponents+Offset.swift */; };
+		AFE5FC321D6D9F1E00728753 /* TimeZone+Offset-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC311D6D9F1E00728753 /* TimeZone+Offset-Tests.swift */; };
+		AFE5FC341D6DA37500728753 /* DateComponents+Offset-Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5FC331D6DA37500728753 /* DateComponents+Offset-Tests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,21 +45,20 @@
 		78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor-Tests.swift"; sourceTree = "<group>"; };
 		AFB84A4F1CE9A66000AA926A /* String+Localized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localized.swift"; sourceTree = "<group>"; };
+		AFCA7CD01D90ECD900DB12C0 /* JSONTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONTests.swift; sourceTree = "<group>"; };
 		AFCC7B941CE0EBAE00854013 /* SwiftUtils.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftUtils.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCC7B971CE0EBAE00854013 /* SwiftUtils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftUtils.h; sourceTree = "<group>"; };
 		AFCC7B991CE0EBAE00854013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AFCC7B9E1CE0EBAE00854013 /* SwiftUtilsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUtilsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCC7BA51CE0EBAE00854013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AFCC7BAE1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+ISO8601.swift"; sourceTree = "<group>"; };
-		AFCC7BB11CE0EC0800854013 /* NSScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSScanner.swift; sourceTree = "<group>"; };
-		AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+ISO8601-Tests.swift"; sourceTree = "<group>"; };
-		AFE5FC101D6AE2B400728753 /* WeakBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakBox.swift; sourceTree = "<group>"; };
-		AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeakBoxTest.swift; sourceTree = "<group>"; };
+		AFCC7BAE1CE0EBEB00854013 /* DateComponents+ISO8601.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+ISO8601.swift"; sourceTree = "<group>"; };
+		AFCC7BB11CE0EC0800854013 /* Scanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scanner.swift; sourceTree = "<group>"; };
+		AFCC7BB41CE0ECC400854013 /* DateComponents+ISO8601-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+ISO8601-Tests.swift"; sourceTree = "<group>"; };
 		AFE5FC281D6C577A00728753 /* JSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
-		AFE5FC2B1D6D9C9500728753 /* NSTimeZone+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeZone+Offset.swift"; sourceTree = "<group>"; };
-		AFE5FC2E1D6D9EBD00728753 /* NSDateComponents+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Offset.swift"; sourceTree = "<group>"; };
-		AFE5FC311D6D9F1E00728753 /* NSTimeZone+Offset-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSTimeZone+Offset-Tests.swift"; sourceTree = "<group>"; };
-		AFE5FC331D6DA37500728753 /* NSDateComponents+Offset-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDateComponents+Offset-Tests.swift"; sourceTree = "<group>"; };
+		AFE5FC2B1D6D9C9500728753 /* TimeZone+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeZone+Offset.swift"; sourceTree = "<group>"; };
+		AFE5FC2E1D6D9EBD00728753 /* DateComponents+Offset.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+Offset.swift"; sourceTree = "<group>"; };
+		AFE5FC311D6D9F1E00728753 /* TimeZone+Offset-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TimeZone+Offset-Tests.swift"; sourceTree = "<group>"; };
+		AFE5FC331D6DA37500728753 /* DateComponents+Offset-Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateComponents+Offset-Tests.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,15 +103,14 @@
 			children = (
 				AFCC7B971CE0EBAE00854013 /* SwiftUtils.h */,
 				AFCC7B991CE0EBAE00854013 /* Info.plist */,
-				AFCC7BAE1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift */,
-				AFE5FC2E1D6D9EBD00728753 /* NSDateComponents+Offset.swift */,
-				AFE5FC2B1D6D9C9500728753 /* NSTimeZone+Offset.swift */,
-				AFCC7BB11CE0EC0800854013 /* NSScanner.swift */,
+				AFCC7BAE1CE0EBEB00854013 /* DateComponents+ISO8601.swift */,
+				AFE5FC2E1D6D9EBD00728753 /* DateComponents+Offset.swift */,
+				AFE5FC2B1D6D9C9500728753 /* TimeZone+Offset.swift */,
+				AFCC7BB11CE0EC0800854013 /* Scanner.swift */,
 				AFB84A4F1CE9A66000AA926A /* String+Localized.swift */,
 				78B7FE3F1D3FCCDD00B6D89E /* UIColor.swift */,
 				781200FF1D657B34004A2B2B /* InsetableTextField.swift */,
 				AFE5FC281D6C577A00728753 /* JSON.swift */,
-				AFE5FC101D6AE2B400728753 /* WeakBox.swift */,
 			);
 			path = SwiftUtils;
 			sourceTree = "<group>";
@@ -123,11 +119,11 @@
 			isa = PBXGroup;
 			children = (
 				AFCC7BA51CE0EBAE00854013 /* Info.plist */,
-				AFCC7BB41CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift */,
-				AFE5FC331D6DA37500728753 /* NSDateComponents+Offset-Tests.swift */,
-				AFE5FC311D6D9F1E00728753 /* NSTimeZone+Offset-Tests.swift */,
+				AFCC7BB41CE0ECC400854013 /* DateComponents+ISO8601-Tests.swift */,
+				AFE5FC331D6DA37500728753 /* DateComponents+Offset-Tests.swift */,
+				AFE5FC311D6D9F1E00728753 /* TimeZone+Offset-Tests.swift */,
 				78B7FE411D3FCF1E00B6D89E /* UIColor-Tests.swift */,
-				AFE5FC131D6AE43400728753 /* WeakBoxTest.swift */,
+				AFCA7CD01D90ECD900DB12C0 /* JSONTests.swift */,
 			);
 			path = SwiftUtilsTests;
 			sourceTree = "<group>";
@@ -189,14 +185,16 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Gopal Sharma";
 				TargetAttributes = {
 					AFCC7B931CE0EBAE00854013 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 					AFCC7B9D1CE0EBAE00854013 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -240,15 +238,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE5FC2C1D6D9C9500728753 /* NSTimeZone+Offset.swift in Sources */,
+				AFE5FC2C1D6D9C9500728753 /* TimeZone+Offset.swift in Sources */,
 				AFB84A501CE9A66000AA926A /* String+Localized.swift in Sources */,
 				AFE5FC291D6C577A00728753 /* JSON.swift in Sources */,
 				781201001D657B34004A2B2B /* InsetableTextField.swift in Sources */,
 				78B7FE401D3FCCDD00B6D89E /* UIColor.swift in Sources */,
-				AFE5FC2F1D6D9EBD00728753 /* NSDateComponents+Offset.swift in Sources */,
-				AFCC7BAF1CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */,
-				AFCC7BB21CE0EC0800854013 /* NSScanner.swift in Sources */,
-				AFE5FC111D6AE2B400728753 /* WeakBox.swift in Sources */,
+				AFE5FC2F1D6D9EBD00728753 /* DateComponents+Offset.swift in Sources */,
+				AFCC7BAF1CE0EBEB00854013 /* DateComponents+ISO8601.swift in Sources */,
+				AFCC7BB21CE0EC0800854013 /* Scanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,17 +253,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFE5FC141D6AE43400728753 /* WeakBoxTest.swift in Sources */,
-				AFCC7BB31CE0EC0800854013 /* NSScanner.swift in Sources */,
-				AFCC7BB61CE0ECC400854013 /* NSDateComponents+ISO8601-Tests.swift in Sources */,
-				AFE5FC301D6D9EBD00728753 /* NSDateComponents+Offset.swift in Sources */,
-				AFCC7BB01CE0EBEB00854013 /* NSDateComponents+ISO8601.swift in Sources */,
-				AFE5FC341D6DA37500728753 /* NSDateComponents+Offset-Tests.swift in Sources */,
+				AFCC7BB31CE0EC0800854013 /* Scanner.swift in Sources */,
+				AFCC7BB61CE0ECC400854013 /* DateComponents+ISO8601-Tests.swift in Sources */,
+				AFE5FC301D6D9EBD00728753 /* DateComponents+Offset.swift in Sources */,
+				AFCC7BB01CE0EBEB00854013 /* DateComponents+ISO8601.swift in Sources */,
+				AFE5FC341D6DA37500728753 /* DateComponents+Offset-Tests.swift in Sources */,
 				78B7FE421D3FCF1E00B6D89E /* UIColor-Tests.swift in Sources */,
-				AFE5FC2D1D6D9C9500728753 /* NSTimeZone+Offset.swift in Sources */,
+				AFE5FC2D1D6D9C9500728753 /* TimeZone+Offset.swift in Sources */,
 				78B7FE431D3FCF6800B6D89E /* UIColor.swift in Sources */,
-				AFE5FC121D6AE2B400728753 /* WeakBox.swift in Sources */,
-				AFE5FC321D6D9F1E00728753 /* NSTimeZone+Offset-Tests.swift in Sources */,
+				AFCA7CD11D90ECD900DB12C0 /* JSONTests.swift in Sources */,
+				AFE5FC321D6D9F1E00728753 /* TimeZone+Offset-Tests.swift in Sources */,
 				AFE5FC2A1D6C577A00728753 /* JSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,8 +292,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -345,8 +343,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -366,6 +366,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -377,6 +378,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -388,6 +390,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -395,6 +398,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -405,6 +409,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.surya-soft.SwiftUtils";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -415,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.surya-soft.SwiftUtilsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -425,6 +431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.surya-soft.SwiftUtilsTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

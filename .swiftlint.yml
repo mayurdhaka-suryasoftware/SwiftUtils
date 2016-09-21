@@ -1,0 +1,33 @@
+disabled_rules: # rule identifiers to exclude from running
+- valid_docs   # /// is valid and used by Xcode
+- cyclomatic_complexity # I don't really understand what this is yet
+- line_length # It's more or less impossible to write Cocoa with a reasonable line length
+- todo # As much as I'd like to always write perfect code all the time, reality requires short cuts. Might as well write those down with a TODO or FIXME so we can find them later.
+
+opt_in_rules: # some rules are only opt-in
+- empty_count
+
+excluded: # paths to ignore during linting. Takes precedence over `included`.
+- Carthage
+- Pods
+- Docs
+- R.generated.swift
+- Dependencies
+
+function_parameter_count:
+  warning: 10
+  error: 15
+
+function_body_length:
+  warning: 150
+  error: 200
+
+type_body_length:
+  warning: 1000
+  error: 1500
+
+file_length:
+  warning: 1200
+  error: 1500
+
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
